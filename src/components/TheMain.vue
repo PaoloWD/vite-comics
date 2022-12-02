@@ -5,23 +5,23 @@
     <div class="d-flex links-container gap-5 py-4 background-jumpotron">
       <div>
         <div v-for="(link, i) in elementList1">
-          <div v-if="link[i] === 0" :class="'text-danger'">{{ link }}</div>
+          <div v-if="link[i] === 0" class="text-danger">{{ link }}</div>
           <div v-else>{{ link }}</div>
         </div>
         <div v-for="(link2, i) in elementList2">
-          <div v-if="link2[i] === 0" :class="'text-danger'">{{ link2 }}</div>
+          <div v-if="link2[i] === 0" class="text-danger">{{ link2 }}</div>
           <div v-else>{{ link2 }}</div>
         </div>
       </div>
       <div>
         <div v-for="(link3, i) in elementList3">
-          <div v-if="link3[i] === 0" :class="'text-danger'">{{ link3 }}</div>
+          <div v-if="link3[i] === 0" class="text-danger">{{ link3 }}</div>
           <div v-else>{{ link3 }}</div>
         </div>
       </div>
       <div>
         <div v-for="(link4, i) in elementList4">
-          <div v-if="link4[i] === 0" :class="'text-danger'">{{ link4 }}</div>
+          <div v-if="link4[i] === 0" class="text-danger">{{ link4 }}</div>
           <div v-else>{{ link4 }}</div>
         </div>
       </div>
