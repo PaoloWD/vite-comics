@@ -1,13 +1,13 @@
 <template>
   <div class="bg-black text-white py-4">
     <div class="container">
-      <h2>--> Content goes here</h2>
+      <h2>--&#62; Content goes here &#60;--</h2>
     </div>
   </div>
 
   <TheMainBannerVue></TheMainBannerVue>
   <div class="jumbotron">
-    <div class="container">
+    <div class="container d-flex justify-content-between">
       <div class="d-flex links-container gap-5 py-4 background-jumpotron">
         <div>
           <div v-for="(link, i) in elementList1">
@@ -36,6 +36,7 @@
           </div>
         </div>
       </div>
+      <div class="a1"><img src="../../public/img/dc-logo-bg.png" alt="" /></div>
     </div>
   </div>
 </template>
@@ -84,7 +85,16 @@ export default {
 };
 </script>
 <style scoped>
+img {
+  width: 550px;
+}
+.a1 {
+  position: relative;
+  bottom: 70px;
+}
 .jumbotron {
+  height: 30vh;
+  overflow: hidden;
   color: white;
   background-image: url(../../public/img/footer-bg.jpg);
   background-size: cover;

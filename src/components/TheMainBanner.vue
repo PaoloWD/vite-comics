@@ -48,6 +48,6 @@ a {
   text-decoration: none;
 }
 img {
-  width: 30px;
+  width: 50px;
 }
 </style>

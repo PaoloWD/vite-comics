@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="d-flex justify-content-around align-items-center pt-3">
+    <div class="d-flex justify-content-around align-items-center py-3">
       <nav>
         <img src="../../public/img/favicon.ico" alt="" />
       </nav>
