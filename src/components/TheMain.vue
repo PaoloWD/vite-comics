@@ -1,28 +1,33 @@
 <template>
   <div class="bg-black text-white py-4"><h2>--> Content goes here</h2></div>
+
   <TheMainBannerVue></TheMainBannerVue>
   <div class="jumbotron">
     <div class="d-flex links-container gap-5 py-4 background-jumpotron">
       <div>
         <div v-for="(link, i) in elementList1">
-          <div v-if="link[i] === 0" class="text-danger">{{ link }}</div>
-          <div v-else>{{ link }}</div>
+          <div :class="i === 0 ? 'bold-text' : 'small-text'">
+            <a href="">{{ link }}</a>
+          </div>
         </div>
         <div v-for="(link2, i) in elementList2">
-          <div v-if="link2[i] === 0" class="text-danger">{{ link2 }}</div>
-          <div v-else>{{ link2 }}</div>
+          <div :class="i === 0 ? 'bold-text' : 'small-text'">
+            <a href="">{{ link2 }}</a>
+          </div>
         </div>
       </div>
       <div>
         <div v-for="(link3, i) in elementList3">
-          <div v-if="link3[i] === 0" class="text-danger">{{ link3 }}</div>
-          <div v-else>{{ link3 }}</div>
+          <div :class="i === 0 ? 'bold-text' : 'small-text'">
+            <a href="">{{ link3 }}</a>
+          </div>
         </div>
       </div>
       <div>
         <div v-for="(link4, i) in elementList4">
-          <div v-if="link4[i] === 0" class="text-danger">{{ link4 }}</div>
-          <div v-else>{{ link4 }}</div>
+          <div :class="i === 0 ? 'bold-text' : 'small-text'">
+            <a href="">{{ link4 }}</a>
+          </div>
         </div>
       </div>
     </div>
@@ -73,13 +78,24 @@ export default {
 };
 </script>
 <style scoped>
-a1 {
-  font-size: 0.5rem;
-}
 .background-jumpotron {
   color: white;
   background-image: url(../../public/img/footer-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bold-text {
+  padding: 1rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.small-text {
+  font-size: 0.7rem;
+}
+a {
+  text-decoration: none;
+  color: lightgray;
 }
 </style>
