@@ -1,32 +1,38 @@
 <template>
-  <div class="bg-black text-white py-4"><h2>--> Content goes here</h2></div>
+  <div class="bg-black text-white py-4">
+    <div class="container">
+      <h2>--> Content goes here</h2>
+    </div>
+  </div>
 
   <TheMainBannerVue></TheMainBannerVue>
   <div class="jumbotron">
-    <div class="d-flex links-container gap-5 py-4 background-jumpotron">
-      <div>
-        <div v-for="(link, i) in elementList1">
-          <div :class="i === 0 ? 'bold-text' : 'small-text'">
-            <a href="">{{ link }}</a>
+    <div class="container">
+      <div class="d-flex links-container gap-5 py-4 background-jumpotron">
+        <div>
+          <div v-for="(link, i) in elementList1">
+            <div :class="i === 0 ? 'bold-text' : 'small-text'">
+              <a href="">{{ link }}</a>
+            </div>
+          </div>
+          <div v-for="(link2, i) in elementList2">
+            <div :class="i === 0 ? 'bold-text' : 'small-text'">
+              <a href="">{{ link2 }}</a>
+            </div>
           </div>
         </div>
-        <div v-for="(link2, i) in elementList2">
-          <div :class="i === 0 ? 'bold-text' : 'small-text'">
-            <a href="">{{ link2 }}</a>
+        <div>
+          <div v-for="(link3, i) in elementList3">
+            <div :class="i === 0 ? 'bold-text' : 'small-text'">
+              <a href="">{{ link3 }}</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <div v-for="(link3, i) in elementList3">
-          <div :class="i === 0 ? 'bold-text' : 'small-text'">
-            <a href="">{{ link3 }}</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div v-for="(link4, i) in elementList4">
-          <div :class="i === 0 ? 'bold-text' : 'small-text'">
-            <a href="">{{ link4 }}</a>
+        <div>
+          <div v-for="(link4, i) in elementList4">
+            <div :class="i === 0 ? 'bold-text' : 'small-text'">
+              <a href="">{{ link4 }}</a>
+            </div>
           </div>
         </div>
       </div>
@@ -78,7 +84,7 @@ export default {
 };
 </script>
 <style scoped>
-.background-jumpotron {
+.jumbotron {
   color: white;
   background-image: url(../../public/img/footer-bg.jpg);
   background-size: cover;

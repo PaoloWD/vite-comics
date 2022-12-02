@@ -1,8 +1,9 @@
 <template>
-  <div class="container">
+  <div class="bg-white">
     <div><NavbarVue></NavbarVue></div>
-    <div><TheMainVue></TheMainVue></div>
   </div>
+
+  <div><TheMainVue></TheMainVue></div>
 </template>
 <script>
 import NavbarVue from "./components/Navbar.vue";
