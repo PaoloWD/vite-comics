@@ -2,8 +2,10 @@
   <div class="bg-white">
     <div><NavbarVue></NavbarVue></div>
   </div>
-
-  <div><TheMainVue></TheMainVue></div>
+  <TheMainVue></TheMainVue>
+  <div class="bg-black">
+    <TheFooterVue></TheFooterVue>
+  </div>
 </template>
 <script>
 import NavbarVue from "./components/Navbar.vue";
