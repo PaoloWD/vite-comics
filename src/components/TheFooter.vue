@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between align-items-center">
       <button class="btn btn-footer text-white">SING-UP NOW!</button>
       <div class="d-flex gap-3 align-items-center">
-        <a href="">FOLLOW US</a>
+        <div class="text-primary">FOLLOW US</div>
 
         <div class="d-flex" v-for="link in iconsList">
           <div><img :src="link.link" alt="" /></div>

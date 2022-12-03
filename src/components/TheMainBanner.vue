@@ -42,10 +42,14 @@ export default {
   methods: {},
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
+@use "../../src/styles/variables" as *;
 a {
-  color: white;
+  color: $link-text;
   text-decoration: none;
+  &:hover {
+    color: $link-text;
+  }
 }
 img {
   width: 50px;

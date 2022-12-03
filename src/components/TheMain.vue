@@ -84,7 +84,8 @@ export default {
   methods: {},
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
+@use "../../src/styles/variables" as *;
 img {
   width: 550px;
 }
@@ -93,9 +94,9 @@ img {
   bottom: 70px;
 }
 .jumbotron {
-  height: 30vh;
+  max-height: 45vh;
   overflow: hidden;
-  color: white;
+  color: $link-text;
   background-image: url(../../public/img/footer-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,13 +106,20 @@ img {
   padding: 1rem 0;
   font-weight: bold;
   font-size: 1.5rem;
+  color: $link-text;
+  a {
+    text-decoration: none;
+    color: $link-text;
+  }
 }
 
 .small-text {
   font-size: 0.7rem;
 }
-a {
-  text-decoration: none;
-  color: lightgray;
+.small-text {
+  a {
+    text-decoration: none;
+    color: lightgray;
+  }
 }
 </style>
