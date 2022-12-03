@@ -38,7 +38,8 @@ export default {
   methods: {},
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
+@use "../../src/styles/variables" as *;
 img {
   width: 30px;
 }
@@ -49,5 +50,9 @@ a {
 .btn-footer {
   border: 1px solid blue;
   border-radius: 0;
+  &:hover {
+    border: 1px solid blue;
+    transform: scale(1.1);
+  }
 }
 </style>
