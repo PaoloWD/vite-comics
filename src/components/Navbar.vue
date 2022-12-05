@@ -5,7 +5,7 @@
         <img src="../../public/img/favicon.ico" alt="" />
       </nav>
       <div class="d-flex justify-content-between">
-        <div v-for="item in items">
+        <div v-for="item in link">
           <div class="navbar navbar-expand-lg">
             <div class="container-fluid">
               <button
@@ -53,21 +53,11 @@
   </div>
 </template>
 <script>
+import { items } from "../composables/linkNav";
 export default {
   data() {
     return {
-      items: [
-        "CHARACTERS",
-        "COMICS",
-        "MOVIES",
-        "TV",
-        "GAMES",
-        "COLLECTIBLES",
-        "VIDEOS",
-        "FANS",
-        "NEWS",
-        "SHOP",
-      ],
+      link: items,
     };
   },
   methods: {
