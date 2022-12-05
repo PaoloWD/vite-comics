@@ -127,7 +127,6 @@ export default {
   color: $link-text;
   background-image: url(../../public/img/footer-bg.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .bold-text {
