@@ -78,6 +78,7 @@ a {
   padding: 1rem 0;
   text-decoration: none;
   border-radius: 0;
+  border-bottom: 5px solid white;
 
   &:hover {
     border-bottom: 5px solid blue;
