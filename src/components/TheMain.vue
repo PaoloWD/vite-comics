@@ -1,8 +1,6 @@
 <template>
   <div class="bg-black text-white">
-    <div class="img-container">
-      <img src="../../public/img/jumbotron.jpg" alt="" />
-    </div>
+    <div class="img-container"></div>
   </div>
   <div class="container">
     <div class="current-series text-center bg-primary">CURRENT SERIES</div>
@@ -111,12 +109,10 @@ export default {
   font-size: 0.7rem;
 }
 .img-container {
-  height: 300px;
+  height: 500px;
   overflow: hidden;
-  img {
-    width: 100%;
-    aspect-ratio: 2/1;
-  }
+  background-image: url(../../public/img/jumbotron.jpg);
+  background-size: cover;
 }
 
 .a1 {
