@@ -1,14 +1,12 @@
 <template>
-  <div class="main-container">
-    <div class="bg-white">
-      <div><NavbarVue></NavbarVue></div>
-    </div>
-    <div class="container-main">
-      <TheMainVue></TheMainVue>
-    </div>
-    <div class="bg-black">
-      <TheFooterVue></TheFooterVue>
-    </div>
+  <div class="bg-white">
+    <div><NavbarVue></NavbarVue></div>
+  </div>
+  <div class="container-main">
+    <TheMainVue></TheMainVue>
+  </div>
+  <div class="bg-black">
+    <TheFooterVue></TheFooterVue>
   </div>
 </template>
 <script>
@@ -27,8 +25,5 @@ export default {
 @use "../src/styles/variables" as *;
 .container-main {
   background-color: $bg-cards;
-  .main-container {
-    height: 100vh;
-  }
 }
 </style>

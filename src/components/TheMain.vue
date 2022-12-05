@@ -12,7 +12,9 @@
         :key="i"
         class="card col-lg-2 col-md-3 col-sm-4 col-xs-6 text-white"
       >
-        <img :src="card.thumb" class="card-img-top" alt="..." />
+        <div class="hidden-img-card">
+          <img :src="card.thumb" class="card-img-top" alt="..." />
+        </div>
         <div class="card-body">
           <h5 class="card-title">{{ card.series }}</h5>
         </div>
@@ -114,6 +116,11 @@ export default {
   color: white;
   padding: 0.5rem 0.5rem;
   font-weight: 450;
+}
+
+.hidden-img-card {
+  height: 175px;
+  overflow: hidden;
 }
 .card {
   border: none;
