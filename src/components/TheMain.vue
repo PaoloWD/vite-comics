@@ -30,26 +30,26 @@
     <div class="container d-flex justify-content-between">
       <div class="d-flex links-container gap-5 py-4 background-jumpotron">
         <div>
-          <div v-for="(link, i) in elementList1">
+          <div v-for="(link, i) in el1">
             <div :class="i === 0 ? 'bold-text' : 'small-text'">
               <a href="">{{ link }}</a>
             </div>
           </div>
-          <div v-for="(link2, i) in elementList2">
+          <div v-for="(link2, i) in el2">
             <div :class="i === 0 ? 'bold-text' : 'small-text'">
               <a href="">{{ link2 }}</a>
             </div>
           </div>
         </div>
         <div>
-          <div v-for="(link3, i) in elementList3">
+          <div v-for="(link3, i) in el3">
             <div :class="i === 0 ? 'bold-text' : 'small-text'">
               <a href="">{{ link3 }}</a>
             </div>
           </div>
         </div>
         <div>
-          <div v-for="(link4, i) in elementList4">
+          <div v-for="(link4, i) in el4">
             <div :class="i === 0 ? 'bold-text' : 'small-text'">
               <a href="">{{ link4 }}</a>
             </div>
@@ -62,45 +62,20 @@
 </template>
 <script>
 import { listCards } from "../composables/myCards";
+import { elementList1 } from "../composables/linkMain";
+import { elementList2 } from "../composables/linkMain";
+import { elementList3 } from "../composables/linkMain";
+import { elementList4 } from "../composables/linkMain";
 import TheMainBannerVue from "./TheMainBanner.vue";
 export default {
   components: { TheMainBannerVue },
   data() {
     return {
+      el1: elementList1,
+      el2: elementList2,
+      el3: elementList3,
+      el4: elementList4,
       myCards: listCards,
-      elementList1: [
-        "DC COMICS",
-        "Characters",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-      ],
-      elementList2: ["SHOP", "Shop Dc", "Shop Dc Collectibles"],
-      elementList3: [
-        "DC",
-        "Term Of Use",
-        "Privacy policy (new)",
-        "Ad choise",
-        "Adversting",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificateds",
-        "Rating",
-        "Shop Help",
-        "Contact Us",
-      ],
-      elementList4: [
-        "SITES",
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-      ],
     };
   },
   methods: {},
