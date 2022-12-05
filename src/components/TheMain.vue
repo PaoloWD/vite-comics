@@ -94,6 +94,15 @@ export default {
 .hidden-img-card {
   height: 175px;
   overflow: hidden;
+
+  img {
+    &:hover {
+      cursor: pointer;
+      transition: 1s;
+      transform: translateY(-5px);
+    }
+    position: relative;
+  }
 }
 .card {
   border: none;
