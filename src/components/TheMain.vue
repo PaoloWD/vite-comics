@@ -1,7 +1,24 @@
 <template>
-  <div class="bg-black text-white py-4">
-    <div class="container">
-      <h2>--&#62; Content goes here &#60;--</h2>
+  <div class="bg-black text-white">
+    <div class="img-container">
+      <img src="../../public/img/jumbotron.jpg" alt="" />
+    </div>
+  </div>
+  <div class="container">
+    <div class="row flex-wrap justify-content-center g-5 pt-5">
+      <div
+        v-for="(card, i) in myCards"
+        :key="i"
+        class="card col-lg-2 col-md-3 col-sm-4 col-xs-6 text-white"
+      >
+        <img :src="card.thumb" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ card.series }}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-5">
+      <button class="btn btn-primary">LOAD MORE</button>
     </div>
   </div>
 
@@ -41,11 +58,13 @@
   </div>
 </template>
 <script>
+import { listCards } from "../composables/myCards";
 import TheMainBannerVue from "./TheMainBanner.vue";
 export default {
   components: { TheMainBannerVue },
   data() {
     return {
+      myCards: listCards,
       elementList1: [
         "DC COMICS",
         "Characters",
@@ -86,10 +105,34 @@ export default {
 </script>
 <style scoped lang="scss">
 @use "../../src/styles/variables" as *;
-img {
-  width: 550px;
+
+.card {
+  border: none;
+  background-color: $bg-cards;
 }
+
+.btn {
+  padding: 0.5rem 4rem;
+  border-radius: 0;
+  font-size: 0.7rem;
+}
+.card-title {
+  font-size: 0.7rem;
+}
+.img-container {
+  height: 25vh;
+  overflow: hidden;
+}
+
+.img-container {
+  img {
+    width: 100%;
+    aspect-ratio: 2/1;
+  }
+}
+
 .a1 {
+  width: 100%;
   position: relative;
   bottom: 70px;
 }

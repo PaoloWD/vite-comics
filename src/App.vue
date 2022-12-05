@@ -2,7 +2,9 @@
   <div class="bg-white">
     <div><NavbarVue></NavbarVue></div>
   </div>
-  <TheMainVue></TheMainVue>
+  <div class="container-main">
+    <TheMainVue></TheMainVue>
+  </div>
   <div class="bg-black">
     <TheFooterVue></TheFooterVue>
   </div>
@@ -19,4 +21,9 @@ export default {
   methods: {},
 };
 </script>
-<style></style>
+<style lang="scss">
+@use "../src/styles/variables" as *;
+.container-main {
+  background-color: $bg-cards;
+}
+</style>
