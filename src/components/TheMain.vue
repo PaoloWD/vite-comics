@@ -5,6 +5,7 @@
     </div>
   </div>
   <div class="container">
+    <div class="current-series text-center bg-primary">CURRENT SERIES</div>
     <div class="row flex-wrap justify-content-center g-5 pt-5">
       <div
         v-for="(card, i) in myCards"
@@ -106,6 +107,14 @@ export default {
 <style scoped lang="scss">
 @use "../../src/styles/variables" as *;
 
+.current-series {
+  position: relative;
+  bottom: 20px;
+  width: 150px;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  font-weight: 450;
+}
 .card {
   border: none;
   background-color: $bg-cards;
@@ -120,11 +129,8 @@ export default {
   font-size: 0.7rem;
 }
 .img-container {
-  height: 25vh;
+  height: 300px;
   overflow: hidden;
-}
-
-.img-container {
   img {
     width: 100%;
     aspect-ratio: 2/1;
@@ -135,9 +141,10 @@ export default {
   width: 100%;
   position: relative;
   bottom: 70px;
+  flex-basis: content;
 }
 .jumbotron {
-  max-height: 45vh;
+  max-height: 350px;
   overflow: hidden;
   color: $link-text;
   background-image: url(../../public/img/footer-bg.jpg);
